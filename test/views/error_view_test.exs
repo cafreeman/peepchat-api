@@ -19,7 +19,7 @@ defmodule Peepchat.ErrorViewTest do
            %{errors: [%{code: 500, title: "Internal Server Error"}]}
   end
 
-  test "render any other" do
+  test "rendering any template that hasn't been specified should fall back to 500" do
     assert render(Peepchat.ErrorView, "500.json", []) ==
            %{errors: [%{code: 500, title: "Internal Server Error"}]}
   end
