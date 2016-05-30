@@ -10,7 +10,7 @@ defmodule Peepchat.Router do
 
     # Registration
     post "register", RegistrationController, :create
-    # Route stuff to Session Controller
-    resources "session", SessionController, only: [:index]
+    # Login
+    post "token", SessionController, :create, as: :login
   end
 end
