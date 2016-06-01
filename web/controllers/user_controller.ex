@@ -1,7 +1,7 @@
 defmodule Peepchat.UserController do
   use Peepchat.Web, :controller
 
-  alias Peepchat.User
+  # alias Peepchat.User
   plug Guardian.Plug.EnsureAuthenticated, handler: Peepchat.AuthErrorHandler
 
   def current(conn, _) do
